@@ -3,6 +3,8 @@
 // Definitions by: Bret Little <https://github.com/blittle>, VILIC VANE <http://vilic.info>, Wayne Maurer <https://github.com/wmaurer>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+declare namespace cheerio {
+
 interface Cheerio {
     // Document References
     // Cheerio https://github.com/cheeriojs/cheerio
@@ -262,8 +264,7 @@ interface CheerioAPI extends CheerioSelector {
   load(element: CheerioElement, options?: CheerioOptionsInterface): CheerioStatic;
 }
 
-declare var cheerio:CheerioAPI;
-
-declare module "cheerio" {
-    export = cheerio;
 }
+
+declare var cheerio: cheerio.CheerioAPI;
+export = cheerio;
